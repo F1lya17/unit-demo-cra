@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is doing homework
 on: [push, pull_request]
 jobs:
   init:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-versions: [ 18.x ]
