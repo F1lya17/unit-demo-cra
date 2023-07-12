@@ -33,6 +33,11 @@
         "e2e": "playwright test --project=chromium && playwright show-report",
         "test-ci": "CI=true npm test -- --reporters=\"default\" --reporters=\"jest-html-reporter\" --reporters=\"jest-teamcity\""
     },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/git/commitlint.js'"
+        }
+    },
     "eslintConfig": {
         "extends": [
             "react-app",
@@ -60,5 +65,13 @@
         "@playwright/test": "^1.28.0",
         "@types/react-helmet": "^6.1.5",
         "jest-html-reporter": "^3.7.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        },
+        "cz-customizable": {
+            "config": "config/git/commitizen.js"
+        }
     }
 }
