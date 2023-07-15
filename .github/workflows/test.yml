@@ -22,7 +22,9 @@ jobs:
       - name: unit test
         run: npm run test
       - name: integration test
-        run: npm run e2e
+        run: |
+          npx playwright install --with-deps
+          npm run e2e
       - name: install commitlint
         run: |
           npm install conventional-changelog-conventionalcommits
