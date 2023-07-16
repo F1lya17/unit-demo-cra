@@ -12,6 +12,6 @@ jobs:
         node-versions: [ 18.x ]
     steps:
       - name: create an issue
-        run: gh issue create --label "RELEASE"
+        run: gh issue create --label "RELEASE" --body `Автор релиза - ${{ github.actor}}`
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
