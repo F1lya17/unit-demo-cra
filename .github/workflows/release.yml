@@ -14,4 +14,4 @@ jobs:
       - name: create an issue
         run: gh issue create --label "RELEASE"
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GH_TOKEN: ${{ secrets.TOKEN }}
