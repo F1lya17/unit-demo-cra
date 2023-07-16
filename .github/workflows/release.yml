@@ -11,10 +11,10 @@ jobs:
       matrix:
         node-versions: [ 18.x ]
     steps:
-      - name: geting repository
-          uses: actions/checkout@v3
-          with:
-            fetch-depth: 0
+      - name: getting repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: downloading github CLI
         uses: wusatosi/setup-gh@v1
       - name: create an issue
