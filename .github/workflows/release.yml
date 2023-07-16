@@ -13,3 +13,5 @@ jobs:
     steps:
       - name: create an issue
         run: gh issue create --label "RELEASE"
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
