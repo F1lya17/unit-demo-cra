@@ -1,0 +1,15 @@
+name: releasing the project
+run-name: ${{ github.actor }} is releasing the project
+on:
+  push:
+    tags:
+      - v[0-9]+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-versions: [ 18.x ]
+    steps:
+      - name: create an issue
+        run: gh issue create --label "RELEASE"
