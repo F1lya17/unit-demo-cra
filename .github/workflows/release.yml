@@ -18,6 +18,6 @@ jobs:
       - name: downloading github CLI
         uses: wusatosi/setup-gh@v1
       - name: create an issue
-        run: gh issue create --body "Автор релиза - ${{ github.triggering_actor }} Номер версии - ${{ toJSON(github.event) }}" --title "New version!" --label "RELEASE" 
+        run: gh issue create --body "Автор релиза - ${{ github.triggering_actor }} Номер версии - ${{ github.event.ref.split('/')[2] }}" --title "New version!" --label "RELEASE" 
         env:
           GH_TOKEN: ${{ secrets.TOKEN }}
