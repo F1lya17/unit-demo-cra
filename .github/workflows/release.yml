@@ -37,11 +37,5 @@ jobs:
         run: |
           npx playwright install --with-deps
           npm run e2e
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: deploy on gh-pages
-        run: npm run deploy
 
       
